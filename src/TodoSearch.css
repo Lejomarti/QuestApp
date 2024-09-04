@@ -1,0 +1,23 @@
+#todo-search {
+    position: relative;
+    margin: 20px auto;
+    max-width: 60%;
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    background: linear-gradient(145deg, #f5e3c4, #e0c7a3); /* Color pergamino claro */
+    border: 2px solid #d1a677; /* Borde oscuro de pergamino */
+    border-radius: 20px;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.5), /* Luz interna */
+                0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra externa */
+    color: #3e2723; /* Color de texto oscuro */
+    transition: all 0.3s ease;
+    text-align: center; 
+}
+
+#todo-search:hover, #todo-search:focus {
+    background: linear-gradient(145deg, #f7ead1, #ebd3a7); /* Color más claro al pasar el mouse */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.7), /* Luz interna más intensa */
+                0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra externa más intensa */
+    outline: none;
+}
