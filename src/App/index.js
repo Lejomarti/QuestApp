@@ -1,11 +1,8 @@
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { TodoItem } from "./TodoItem";
-import { CreateTodoButton } from "./CreateTodoButton";
 import React from "react";
-import "./App.css";
+import { useLocalStorage } from "./useLocalStorage";
+import { AppUI } from "./AppUI";
 
+// localStorage.removeItem("QUEST_V1")
 // const defaultTodos = [
 //   { text: "Estudiar Kotlin", completed: false },
 //   {
@@ -25,19 +22,13 @@ import "./App.css";
 // localStorage.setItem("QUESTS_V1",JSON.stringify(defaultTodos))
 
 function App() {
-  const localStorageQuests = localStorage.getItem("QUESTS_V1");
-  let parsedQuests;
-
-  //condicional para crear un array vacio de entrada
-  if (!localStorageQuests) {
-    localStorage.setItem("QUESTS_V1", JSON.stringify([]));
-    parsedQuests = [];
-  } else {
-    parsedQuests = JSON.parse(localStorageQuests);
-  }
-
+  const {
+    item: quest,
+    saveItem: saveQuests,
+    loading,
+    error,
+  } = useLocalStorage("QUESTS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
-  const [quest, setQuest] = React.useState(parsedQuests);
 
   const completedQuest = quest.filter((todo) => !!todo.completed).length;
   const totalQuest = quest.length;
@@ -48,41 +39,32 @@ function App() {
 
   const completeAQuest = (text) => {
     const newQuests = [...quest];
-    const todoIndex = newQuests.findIndex((todo) => todo.text == text);
+    const todoIndex = newQuests.findIndex((todo) => todo.text === text);
     newQuests[todoIndex].completed
       ? (newQuests[todoIndex].completed = false)
       : (newQuests[todoIndex].completed = true);
-    setQuest(newQuests);
+    saveQuests(newQuests);
   };
 
   const deleteAQuest = (text) => {
     const newQuests = [...quest];
-    const todoIndex = newQuests.findIndex((todo) => todo.text == text);
+    const todoIndex = newQuests.findIndex((todo) => todo.text === text);
     newQuests.splice(todoIndex, 1);
-    setQuest(newQuests);
+    saveQuests(newQuests);
   };
 
   return (
-    <div className="quest-side">
-      <h1 className="title">Quest</h1>
-      <div className="quest-list-container">
-        <TodoCounter completed={completedQuest} total={totalQuest} />
-        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
-        <TodoList>
-          {searchedTodos.map((todo) => (
-            <TodoItem
-              key={todo.text}
-              text={todo.text}
-              completed={todo.completed}
-              onComplete={() => completeAQuest(todo.text)}
-              onDelete={() => deleteAQuest(todo.text)}
-            />
-          ))}
-        </TodoList>
-      </div>
-
-      <CreateTodoButton />
-    </div>
+    <AppUI
+      loading={loading}
+      error={error}
+      completedQuest={completedQuest}
+      totalQuest={totalQuest}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      completeAQuest={completeAQuest}
+      deleteAQuest={deleteAQuest}
+    />
   );
 }
 

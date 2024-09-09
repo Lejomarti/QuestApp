@@ -1,0 +1,74 @@
+
+/* .loader {
+    width: 80px;
+    aspect-ratio: 1;
+    --c:#8d7958 98%,#0000;
+    background:
+      radial-gradient(50% 70% at 50% 120%, var(--c)) top,
+      radial-gradient(70% 50% at -20% 50%, var(--c)) right,
+      radial-gradient(50% 70% at 50% -20%, var(--c)) bottom,
+      radial-gradient(70% 50% at 120% 50%, var(--c)) left;
+    background-size: 100% 50.1%,50.1% 100%;
+    background-repeat: no-repeat;
+    -webkit-mask: radial-gradient(circle 5px,#0000 90%,#000);
+    animation: l9 1.5s infinite linear;
+  }
+  @keyframes l9 { 
+    100%{transform: rotate(1turn)}
+  } */
+
+/* .loader {
+  margin: auto;
+  width: 400px;
+  aspect-ratio: 1;
+  color: #8d7958;
+  background: linear-gradient(currentColor 0 0) 50%/100% 15px,
+    linear-gradient(currentColor 0 0) 50%/30px 100%;
+  background-repeat: no-repeat;
+  clip-path: polygon(
+    calc(50% - 40px) 0,
+    calc(50% + 40px) 20px,
+    calc(50% + 80px) 75%,
+    calc(50% - 80px) 75%
+  );
+  animation: l9 1s infinite;
+}
+
+@keyframes l9 {
+  to {
+    transform: perspective(300px) translateZ(50px);
+    opacity: 0;
+  }
+} */
+  
+/* HTML: <div class="loader"></div> */
+.loader {
+    margin: 40% auto;
+    width: 80px;
+    aspect-ratio: 1;
+    display: grid;
+    color: #8d7958;
+    mask:radial-gradient(circle 5px,#0000 90%,#000);
+    animation: l3 1.5s infinite linear;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    grid-area: 1/1;
+    background: 
+      radial-gradient(farthest-side at bottom left, currentColor 94%,#0000) top left, 
+      radial-gradient(farthest-side at top right  , currentColor 94%,#0000) bottom right;
+    background-size: 63% 50%;
+    background-repeat: no-repeat;
+    mask: 
+      radial-gradient(65% 110% at bottom left, #0000 94%,#000) top left, 
+      radial-gradient(65% 110% at top   right, #0000 94%,#000) bottom right;
+    mask-size: 62% 50%;
+    mask-repeat: no-repeat;
+  }
+  .loader:after {
+    transform: rotate(90deg);
+  }
+  @keyframes l3 { 
+    100%{transform: rotate(1turn)}
+  }
