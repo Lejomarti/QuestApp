@@ -40,3 +40,22 @@ function useLocalStorage(itemName, initialValue) {
 }
 
 export { useLocalStorage };
+
+// localStorage.removeItem("QUEST_V1")
+// const defaultTodos = [
+//   { text: "Estudiar Kotlin", completed: false },
+//   {
+//     text: "Descargar Wilcom  y luego aquello y lo otro y mas texto por favor... Siii. masss textooo muajajajaja, que no se rompa.. o hasta que se rompa",
+//     completed: true,
+//   },
+//   { text: "Estudiar React", completed: true },
+//   { text: "Estudiar SQL", completed: false },
+//   { text: "Estudiar Bordados", completed: false },
+//   { text: "construir cultivo hidroponico", completed: false },
+//   { text: "hacer la base de datos", completed: false },
+//   { text: "hacer la base de datos2", completed: false },
+//   { text: "hacer la base de datos3", completed: false },
+//   { text: "hacer la base de datos4", completed: false },
+//   { text: "hacer la base de datos5", completed: false },
+// ];
+// localStorage.setItem("QUESTS_V1",JSON.stringify(defaultTodos))

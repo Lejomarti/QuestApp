@@ -1,13 +1,17 @@
+import React from "react";
+import { TodoContext } from "../TodoContext";
 import "./TodoCounter.css";
 
-function TodoCounter({ total, completed }) {
-  return completed === total ? (
-    <h1 id="counter-title" style={{fontSize:24}}>
-      {`All ${total} Quest completed`}
+function TodoCounter() {
+  const { completedQuest,totalQuest } = React.useContext(TodoContext);
+
+  return completedQuest === totalQuest ? (
+    <h1 id="counter-title" style={{ fontSize: 24 }}>
+      {`All ${totalQuest} Quest completed`}
     </h1>
   ) : (
     <h1 id="counter-title">
-      {completed} / {total}
+      {completedQuest} / {totalQuest}
     </h1>
   );
 }
