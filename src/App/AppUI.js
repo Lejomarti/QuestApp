@@ -7,19 +7,27 @@ import "./App.css";
 import { TodosLoading } from "../TodosLoading";
 import { TodosError } from "../TodosError";
 import { EmptyTodos } from "../EmptyTodos";
-import { TodoContext } from "../TodoContext";
+import { Modal } from "../Modal";
+import { QuestForm } from "../QuestForm";
 import React from "react";
+import { TodoContext } from "../TodoContext";
 
 function AppUI() {
   const { loading, error, searchedTodos, completeAQuest, deleteAQuest } =
     React.useContext(TodoContext);
 
   return (
-    <div className="quest-side">
-      <h1 className="title">Quest</h1>
-      <div className="quest-list-container">
-        <TodoCounter />
-        <TodoSearch />
+    <>
+      <div className="App">
+        <div className="create-quest-side">
+          <QuestForm/>
+        </div>
+
+        <div className="quest-side">
+          <h1 className="title">Quest</h1>
+          <div className="quest-list-container">
+            <TodoCounter />
+            <TodoSearch />
 
             <TodoList>
               {loading && <TodosLoading />}
@@ -35,10 +43,10 @@ function AppUI() {
                 />
               ))}
             </TodoList>
+          </div>
+        </div>
       </div>
-
-      <CreateTodoButton />
-    </div>
+    </>
   );
 }
 

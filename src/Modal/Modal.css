@@ -1,0 +1,22 @@
+.Modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* adjust the opacity to your liking */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal-content {
+    /* Create a white space with a standard form size */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 400px; /* adjust the width to your liking */
+    height: 300px; /* adjust the height to your liking */
+    margin: 20px;
+  }
