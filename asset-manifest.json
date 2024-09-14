@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Universidad/Platzi%20clases/Programaci%C3%B3n/Cursos%20React/Curso%20React/curso-react-intro/build/static/css/main.758f06c1.css",
+    "main.js": "/Universidad/Platzi%20clases/Programaci%C3%B3n/Cursos%20React/Curso%20React/curso-react-intro/build/static/js/main.9ca974b1.js",
+    "static/media/background-medievalWorld.jpg": "/Universidad/Platzi%20clases/Programaci%C3%B3n/Cursos%20React/Curso%20React/curso-react-intro/build/static/media/background-medievalWorld.9a7f4d7e7d4dd8746ccd.jpg",
+    "static/media/quest-background.png": "/Universidad/Platzi%20clases/Programaci%C3%B3n/Cursos%20React/Curso%20React/curso-react-intro/build/static/media/quest-background.08f139d59647f8815a7d.png",
+    "index.html": "/Universidad/Platzi%20clases/Programaci%C3%B3n/Cursos%20React/Curso%20React/curso-react-intro/build/index.html",
+    "main.758f06c1.css.map": "/Universidad/Platzi%20clases/Programaci%C3%B3n/Cursos%20React/Curso%20React/curso-react-intro/build/static/css/main.758f06c1.css.map",
+    "main.9ca974b1.js.map": "/Universidad/Platzi%20clases/Programaci%C3%B3n/Cursos%20React/Curso%20React/curso-react-intro/build/static/js/main.9ca974b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.758f06c1.css",
+    "static/js/main.9ca974b1.js"
+  ]
+}
