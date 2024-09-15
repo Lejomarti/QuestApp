@@ -1,12 +1,20 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# QuestApp
 
-¡Hola, Platzinauta!
+QuestApp es una aplicación de lista de tareas (To-do List) diseñada con temática de videojuegos de fantasía, donde las tareas se convierten en misiones que completar. Esta temática hace que la experiencia sea más interactiva y motivante, generando gratificación visual al completar cada misión.
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+![Quest App Image](image.png)
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+## Características
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+- **Misiones**: Las tareas se convierten en misiones que se pueden complet
+- **Interfaz amigable**: Utiliza una interfaz con temática medieval, inspirada en los videojuegos, que motiva a los usuarios a completar misiones.
+- **Misiones personalizables**: Agrega, completa y elimina misiones fácilmente
+- **Visualización de progreso**: Visualiza el número de misiones completadas y las pendientes.
+- **Generación de imágenes**: Las imágenes fueron creadas utilizando inteligencia artificial.
+
+## GitHub Pages
+
+La aplicación se puede encontrar en el siguiente enlace: (https://lejomarti.github.io/QuestApp/)
 
 ## Getting Started with Create React App
 
