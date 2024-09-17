@@ -10,14 +10,14 @@ function QuestForm() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    addQuest(newQuestTextAreaValue);
+    if(newQuestTextAreaValue){
+      addQuest(newQuestTextAreaValue);
+      setNewQuestTextAreaValue("");
+    }
   };
 
   const onErase = (event) => {
-    event.preventDefault();
-    const formBox = event.target.closest(".form-box");
-    const textArea = formBox.querySelector("textarea");
-    textArea.value = "";
+    setNewQuestTextAreaValue("");
   };
 
   const onChange = (event) => {
