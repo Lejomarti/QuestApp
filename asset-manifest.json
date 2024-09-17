@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/QuestApp/static/css/main.e9dbe1c2.css",
-    "main.js": "/QuestApp/static/js/main.d62e8572.js",
+    "main.css": "/QuestApp/static/css/main.95133fba.css",
+    "main.js": "/QuestApp/static/js/main.a0559cae.js",
     "static/media/background-medievalWorld.jpg": "/QuestApp/static/media/background-medievalWorld.9a7f4d7e7d4dd8746ccd.jpg",
     "static/media/blankie_stickers.png": "/QuestApp/static/media/blankie_stickers.6a22b5e9991f5b2c0b8b.png",
     "static/media/quest-background.png": "/QuestApp/static/media/quest-background.08f139d59647f8815a7d.png",
     "index.html": "/QuestApp/index.html",
-    "main.e9dbe1c2.css.map": "/QuestApp/static/css/main.e9dbe1c2.css.map",
-    "main.d62e8572.js.map": "/QuestApp/static/js/main.d62e8572.js.map"
+    "main.95133fba.css.map": "/QuestApp/static/css/main.95133fba.css.map",
+    "main.a0559cae.js.map": "/QuestApp/static/js/main.a0559cae.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9dbe1c2.css",
-    "static/js/main.d62e8572.js"
+    "static/css/main.95133fba.css",
+    "static/js/main.a0559cae.js"
   ]
 }
