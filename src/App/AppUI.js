@@ -29,7 +29,27 @@ function AppUI() {
             <TodoCounter />
             <TodoSearch />
 
-            <TodoList>
+            <TodoList 
+            error= {error}
+            loading = {loading}
+            searchedTodos = {searchedTodos}
+
+            onError = {()=> <TodosError/>}
+            onLoading = {()=> <TodosLoading/>}
+            onEmptyTodos = {()=><EmptyTodos/>}
+            render={ todo =>(
+              <TodoItem
+                key={todo.text}
+                text={todo.text}
+                completed={todo.completed}
+                onComplete={() => completeAQuest(todo.text)}
+                onDelete={() => deleteAQuest(todo.text)}
+              />
+            )}
+          
+            />
+
+            {/* <TodoList>
               {loading && <TodosLoading />}
               {error && <TodosError />}
               {!loading && searchedTodos.length == 0 && <EmptyTodos />}
@@ -42,7 +62,7 @@ function AppUI() {
                   onDelete={() => deleteAQuest(todo.text)}
                 />
               ))}
-            </TodoList>
+            </TodoList> */}
           </div>
         </div>
       </div>

@@ -99,3 +99,11 @@ ul::-webkit-scrollbar-track {
     0 7px 20px rgba(0, 0, 0, 0.4);
   transform: translateY(-0.25em);
 }
+
+.TodoList-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 60px;
+}
